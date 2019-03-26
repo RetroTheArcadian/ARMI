@@ -85,7 +85,9 @@ Create an issue here on github
 
 ## Donations (Optional)
 No donations required. 
-This is project a hobby project free for all
+This is project a hobby project free for all.
+
+If you love **ARMI** you can buy me a [🍺](https://beerpay.io/RetroTheArcadian/ARMI)
 ## License
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
