@@ -1,0 +1,215 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+
+    <!-- Set this to true if you enable server-side prerendering -->
+    <BuildServerSideRenderer>false</BuildServerSideRenderer>
+    <AssemblyName>ARMI.Web</AssemblyName>
+    <RootNamespace>ARMI.Web</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Coravel" Version="2.3.1" />
+    <PackageReference Include="FluentFTP" Version="23.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="Z.EntityFramework.Extensions.EFCore" Version="2.1.58" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.3" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="$(SpaRoot)**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Remove="wwwroot\**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ARMI.db" />
+    <None Remove="ClientApp\src\app\interfaces\models.tst" />
+    <None Remove="ClientApp\src\app\loading\loading.component.ts" />
+    <None Remove="ClientApp\src\app\loading\loading.interface.ts" />
+    <None Remove="ClientApp\src\app\loading\loading.module.ts" />
+    <None Remove="ClientApp\src\app\services\jobHub.service.ts" />
+    <None Remove="ClientApp\src\app\services\loading.service.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\app\masterdata\" />
+    <Folder Include="ClientApp\src\app\jobs\" />
+    <Folder Include="ClientApp\src\app\credits\" />
+    <Folder Include="ClientApp\src\app\links\" />
+    <Folder Include="ClientApp\src\app\footer\" />
+    <Folder Include="ClientApp\src\app\themes\" />
+    <Folder Include="ClientApp\src\app\systems\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ARMI.Data\ARMI.Data.csproj" />
+    <ProjectReference Include="..\ARMI.Dtos\ARMI.Dtos.csproj" />
+    <ProjectReference Include="..\ARMI.Enums\ARMI.Enums.csproj" />
+    <ProjectReference Include="..\ARMI.Models\ARMI.Models.csproj" />
+    <ProjectReference Include="..\ARMI.Services\ARMI.Services.csproj" />
+    <ProjectReference Include="..\ARMI.SqlLiteServer\ARMI.SqlLiteServer.csproj" />
+    <ProjectReference Include="..\ARMI.SqlServer\ARMI.SqlServer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ClientApp\src\app\interfaces\ArcadeDbDto.t4.content">
+      <CustomToolNamespace>Dtos\ScraperDtos\ArcadeDbDto.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\ArcadeDbResultDto.t4.content">
+      <CustomToolNamespace>Dtos\ScraperDtos\ArcadeDbResultDto.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\Client.t4">
+      <CustomToolNamespace>Models\Client.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\ClientHostType.t4.content">
+      <CustomToolNamespace>Enums\ClientHostType.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\EmulationStationGameDto.t4.content">
+      <CustomToolNamespace>Dtos\EmulationStation\EmulationStationGameDto.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\EmulationStationGameListDto.t4.content">
+      <CustomToolNamespace>Dtos\EmulationStation\EmulationStationGameListDto.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\Emulator.t4">
+      <CustomToolNamespace>Models\Emulator.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\Job.t4">
+      <CustomToolNamespace>Models\Job.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\JobStatus.t4.content">
+      <CustomToolNamespace>Enums\JobStatus.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\ProgressDto.t4.content">
+      <CustomToolNamespace>Dtos\ProgressDto.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\Rom.t4">
+      <CustomToolNamespace>Models\Rom.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\RomDto.t4.content">
+      <CustomToolNamespace>Dtos\RomDto.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\RomList.t4">
+      <CustomToolNamespace>Models\RomList.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\RomListRom.t4">
+      <CustomToolNamespace>Models\RomListRom.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\System.t4">
+      <CustomToolNamespace>Models\System.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\TreeViewNodeDto.t4.content">
+      <CustomToolNamespace>Dtos\TreeViewNodeDto.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\_Models.ts">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>_Models.tt</DependentUpon>
+    </None>
+    <None Update="ClientApp\src\app\interfaces\_Models.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>_Models.ts</LastGenOutput>
+    </None>
+    <None Update="ClientApp\src\app\services\client.service.ts">
+      <CustomToolNamespace>Controllers\ClientController.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\services\emulators.service.ts">
+      <CustomToolNamespace>Controllers\EmulatorsController.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\services\import.service.ts">
+      <CustomToolNamespace>Controllers\ImportController.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\services\job.service.ts">
+      <CustomToolNamespace>Controllers\JobController.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\services\romlist.service.ts">
+      <CustomToolNamespace>Controllers\RomListController.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\services\roms.service.ts">
+      <CustomToolNamespace>Controllers\RomsController.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\services\scraper.service.ts">
+      <CustomToolNamespace>Controllers\ScraperController.cs</CustomToolNamespace>
+    </None>
+    <None Update="src\app\interfaces\models.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>models.ts</LastGenOutput>
+    </None>
+    <None Update="src\app\interfaces\models.ts">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>models.tt</DependentUpon>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\loading\loading.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\loading\loading.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\loading\loading.interface.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\jobHub.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\loading\loading.service.ts" />
+  </ItemGroup>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --prod" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -- --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+      <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES2017</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptCompileOnSaveEnabled>False</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,24 @@
+<div *ngIf="loading && progress != null" class="loader-overlay">
+  <div class="loader-animation">
+    <div class="circles">
+      <span class="one"></span>
+      <span class="two"></span>
+      <span class="three"></span>
+    </div>
+    <div class="pacman">
+      <span class="top"></span>
+      <span class="bottom"></span>
+      <span class="left"></span>
+      <div class="eye"></div>
+    </div>
+  </div>
+  <div class="loader-bar" *ngIf="progress.total != 0">
+    <ngb-progressbar type="warning" [value]="progress.percent">
+      <span class="text-center">{{progress.done}} of {{progress.total}}</span>
+    </ngb-progressbar>
+  </div>
+  <div class="loader-info text-center">
+    <p class="arcadia yellow">{{progress.msgLine1}}</p>
+    <p class="arcadia green">{{progress.msgLine2}}</p>
+  </div>
+</div>

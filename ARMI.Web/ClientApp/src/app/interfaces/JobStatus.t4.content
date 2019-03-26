@@ -1,0 +1,10 @@
+﻿
+export enum JobStatus {
+  queued = 0,
+  running = 1,
+  cancelled = 2,
+  failed = 3,
+  done = 4,
+}
+
+

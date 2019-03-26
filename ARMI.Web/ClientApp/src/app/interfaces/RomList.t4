@@ -1,0 +1,12 @@
+﻿
+export class RomList  {
+    romListId: number;
+    parentRomListId: number;
+    parentRomList: RomList;
+    title: string;
+    subRomLists: RomList[];
+    romListRoms: RomListRoms[];
+    clientId: number;
+    client: Client;
+}
+

@@ -1,0 +1,8 @@
+﻿
+export class RomListRoms  {
+    romListId: number;
+    romList: RomList;
+    romId: number;
+    rom: Rom;
+}
+

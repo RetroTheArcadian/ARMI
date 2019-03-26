@@ -1,0 +1,29 @@
+<h4 class="arcadia">
+  <label class="yellow">R</label>
+  <label class="blue">oms</label>
+</h4>
+
+<p>This section is where you alter the roms configured in attractmode.</p>
+<p>Roms are imported from Romlists and you can import the Romlists from attractmode on the Romlist page.</p>
+<p *ngIf="!roms"><em>Loading...</em></p>
+
+<table class='table table-striped table-dark' *ngIf="roms">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>CloneOf</th>
+      <th>Year</th>
+      <th>Rom</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rom of roms">
+      <td>{{ rom.name }}</td>
+      <td>{{ rom.title }}</td>
+      <td>{{ rom.cloneOf }}</td>
+      <td>{{ rom.year }}</td>
+      <td><div class="checkmark"></div></td>
+    </tr>
+  </tbody>
+</table>

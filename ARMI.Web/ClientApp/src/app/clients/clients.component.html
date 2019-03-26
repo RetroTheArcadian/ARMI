@@ -1,0 +1,33 @@
+<h3 class="arcadia">
+  <label class="yellow">C</label>
+  <label class="blue">lients</label>
+</h3>
+
+<p>This section is where you alter the clients you want to alter or syncronize.</p>
+
+<p *ngIf="!clients"><em>Loading...</em></p>
+<table class='table table-striped table-dark' *ngIf="clients">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>HostType</th>
+      <th>Host</th>
+      <th>Port</th>
+      <th>Master</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{ client.title }}</td>
+      <td>{{ getClientHostType(client.clientHostType) }}</td>
+      <td>{{ client.host }}</td>
+      <td>{{ client.port }}</td>
+      <td>
+        <label class="radio-container">          
+          <input type="radio" name="isMaster" [checked]="client.isMaster" (click)="onIsMasterChange(client.clientId)">
+          <span class="radio-checkmark"></span>
+        </label>
+      </td>
+  </tr>
+  </tbody>
+  </table>

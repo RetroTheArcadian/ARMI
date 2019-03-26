@@ -1,0 +1,11 @@
+﻿
+export class ProgressDto  {
+    percent: number;
+    done: number;
+    remaining: number;
+    total: number;
+    msgLine1: string;
+    msgLine2: string;
+    jobStatus: JobStatus;
+}
+

@@ -1,0 +1,28 @@
+﻿
+export class Rom  {
+    romId: number;
+    name: string;
+    title: string;
+    cloneOf: string;
+    year: string;
+    manufacturer: string;
+    category: string;
+    players: string;
+    rotation: string;
+    control: string;
+    status: string;
+    displayCount: string;
+    displayType: string;
+    altRomname: string;
+    altTitle: string;
+    extra: string;
+    buttons: string;
+    description: string;
+    modifiedDate: Date;
+    emulatorId: number;
+    romListId: number;
+    emulator: Emulator;
+    emulatorNameOrg: string;
+    romListRoms: RomListRoms[];
+}
+

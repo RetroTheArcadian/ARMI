@@ -1,0 +1,10 @@
+﻿
+export class Job  {
+    jobId: number;
+    jobIdGuid: string;
+    title: string;
+    jobStatus: JobStatus;
+    start: Date;
+    end: Date;
+}
+

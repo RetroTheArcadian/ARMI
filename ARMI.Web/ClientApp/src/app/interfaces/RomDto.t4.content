@@ -1,0 +1,36 @@
+﻿
+export class RomDto  {
+    romId: number;
+    name: string;
+    title: string;
+    cloneOf: string;
+    year: string;
+    manufacturer: string;
+    category: string;
+    players: string;
+    rotation: string;
+    control: string;
+    status: string;
+    displayCount: string;
+    displayType: string;
+    altRomname: string;
+    altTitle: string;
+    extra: string;
+    buttons: string;
+    description: string;
+    modifiedDate: Date;
+    emulatorId: number;
+    romListId: number;
+    emulator: Emulator;
+    emulatorNameOrg: string;
+    romListRoms: RomListRoms[];
+    haveRomFile: boolean;
+    haveBoxartFile: boolean;
+    haveCartartFile: boolean;
+    haveFanartFile: boolean;
+    haveFlyerFile: boolean;
+    haveMarqueeFile: boolean;
+    haveSnapFile: boolean;
+    haveWheelFile: boolean;
+}
+

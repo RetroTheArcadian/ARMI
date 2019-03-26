@@ -1,0 +1,29 @@
+﻿
+export class ArcadeDbResultDto  {
+    index: number;
+    url: string;
+    game_name: string;
+    title: string;
+    cloneof: string;
+    manufacturer: string;
+    url_image_ingame: string;
+    url_image_title: string;
+    url_image_marquee: string;
+    url_image_cabinet: string;
+    url_image_flyer: string;
+    genre: string;
+    players: number;
+    year: string;
+    status: string;
+    history: string;
+    history_copyright_long: string;
+    history_copyright_short: string;
+    youtube_video_id: string;
+    url_video_shortplay: string;
+    url_video_shortplay_hd: string;
+    emulator_id: number;
+    emulator_name: string;
+    languages: string;
+    rate: number;
+}
+

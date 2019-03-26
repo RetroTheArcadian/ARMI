@@ -1,0 +1,301 @@
+/* You can add global styles to this file, and also import other style files */
+// Custom.scss
+// Color system
+$white: #ebebeb !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$blue: #049CD8 !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #E52521 !default;
+$orange: #fd7e14 !default;
+$yellow: #FBD000 !default;
+$green: #43B047 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge( ( "blue": $blue, "indigo": $indigo, "purple": $purple, "pink": $pink, "red": $red, "orange": $orange, "yellow": $yellow, "green": $green, "teal": $teal, "cyan": $cyan, "white": $white, "gray": $gray-600, "gray-dark": $gray-800 ), $colors );
+
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: rgba($gray-800, .65) !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge( ( "primary": $primary, "secondary": $secondary, "success": $success, "info": $info, "warning": $warning, "danger": $danger, "light": $light, "dark": $dark ), $theme-colors );
+
+$dark-transparent: rgba(21, 21, 21, .85);
+$dark-green-transparent: rgba(4, 34, 5, .85);
+
+$body-bg: #000;
+$body-color: #ccc;
+
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge( ( 0: 0, 1: ($spacer * .25), 2: ($spacer * .5), 3: $spacer, 4: ($spacer * 1.5), 5: ($spacer * 3) ), $spacers );
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: $white !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+$component-active-color: $white !default;
+$component-active-bg: $blue !default;
+
+$font-size-base: .85rem !default; // 1rem Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * .875 !default;
+
+$navbar-dark-active-color: $yellow;
+$navbar-dark-hover-color: rgba($blue, .75) !default;
+$navbar-padding-y: $spacer / 6 !default;
+
+$list-group-bg: $dark-transparent;
+
+$table-dark-color: $white !default;
+$table-dark-bg: $dark-transparent !default;
+$table-dark-accent-bg: rgba($white, .05) !default;
+$table-dark-hover-color: $table-dark-color !default;
+$table-dark-hover-bg: rgba($white, .075) !default;
+$table-dark-border-color: lighten($table-dark-bg, 7.5%) !default;
+$table-dark-color: $white !default;
+
+$dropdown-color: $white !default;
+$dropdown-bg: $dark-transparent !default;
+$dropdown-link-color: $white !default;
+$dropdown-link-hover-color: $yellow !default;
+$dropdown-link-hover-bg: $gray-700 !default;
+
+$dropdown-link-active-color: $component-active-color !default;
+$dropdown-link-active-bg: $component-active-bg !default;
+
+// Pagination
+
+$pagination-padding-y: .5rem !default;
+$pagination-padding-x: .75rem !default;
+$pagination-padding-y-sm: .25rem !default;
+$pagination-padding-x-sm: .5rem !default;
+$pagination-padding-y-lg: .75rem !default;
+$pagination-padding-x-lg: 1.5rem !default;
+$pagination-line-height: 1.25 !default;
+
+$pagination-color: $link-color !default;
+$pagination-bg: $dark-transparent !default;
+
+$pagination-border-color: $gray-800 !default;
+
+$pagination-hover-color: $link-hover-color !default;
+$pagination-hover-bg: $gray-700 !default;
+$pagination-hover-border-color: $gray-600 !default;
+
+$pagination-active-color: $component-active-color !default;
+$pagination-active-bg: $component-active-bg !default;
+$pagination-active-border-color: $pagination-active-bg !default;
+
+$pagination-disabled-color: $gray-600 !default;
+$pagination-disabled-bg: $dark-transparent !default;
+$pagination-disabled-border-color: $gray-900 !default;
+
+//Custom Select
+$input-bg: $dark-transparent !default;
+$input-disabled-bg: $gray-900 !default;
+
+$input-color: $white !default;
+$input-border-color: $gray-700 !default;
+
+body {
+  background-color: #323232;
+  color: #ebebeb;
+  background: url("src/assets/backgrounds/arcade.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.container-main {
+  padding-top: 10px;
+}
+.navbar {
+  min-height: 50px !important;
+}
+
+@font-face {
+  font-family: '04b';
+  src: url('src/assets/fonts/04b30.woff2') format('woff2'), url('src/assets/fonts/04b30.woff') format('woff'), url('src/assets/fonts/04b30.ttf') format('truetype'), url('src/assets/fonts/04b30.svg#04b30') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.arcadia {
+  font-family: '04b';
+  font-weight: normal;
+  font-style: normal;
+}
+.arcadia-logo {
+  height: 60px;
+  position: absolute;
+  top: 2px;
+  left: 10px;
+}
+.yellow {
+  color: #FBD000;
+}
+.blue {
+  color: #049CD8;
+}
+.red {
+  color: #E52521;
+}
+.green {
+  color: #43B047;
+}
+/* The container */
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+  /* Hide the browser's default radio button */
+  .radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+/* Create a custom radio button */
+.radio-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .radio-checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .radio-checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .radio-checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .radio-checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.checkmark {
+  /*display: inline-block;*/
+  transform: rotate(45deg);
+  height: 14px;
+  width: 7px;
+  border-bottom: 3px solid #78b13f;
+  border-right: 3px solid #78b13f;
+}
+
+// Context menu
+.ngx-contextmenu .dropdown-menu {
+  border: solid 1px $input-border-color;
+  border-radius: 2%;
+  background-color: $dark-transparent;
+  padding: 0;
+}
+
+.ngx-contextmenu li {
+  display: block;
+  border-bottom: solid 1px $input-border-color;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.ngx-contextmenu li:first-child {
+  border-bottom: dashed 2px $input-border-color;
+  background-color: $yellow;
+}
+
+.ngx-contextmenu li:last-child {
+  border-bottom: none;
+}
+
+.ngx-contextmenu a {
+  color: $white;
+  display: block;
+  padding: 0.3em .6em;
+}
+
+.ngx-contextmenu a:hover {
+  color: $yellow;
+  background-color: $input-border-color;
+}
+
+.ngx-contextmenu li:first-child a, .ngx-contextmenu li:first-child a:hover {
+  color: $blue;
+  font-weight:700;
+  text-align: center;
+  background-color: transparent;
+}
+
+//Imports
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "loading.scss";
+@import "tree.scss";
+/* Font Awsome */
+.fa, .fas{
+  margin-right:4px;
+}
+$fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";

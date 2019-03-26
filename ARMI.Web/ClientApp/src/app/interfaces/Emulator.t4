@@ -1,0 +1,25 @@
+﻿
+export class Emulator  {
+    emulatorId: number;
+    emulatorName: string;
+    executable: string;
+    args: string;
+    rompath: string;
+    romext: string;
+    infoSource: string;
+    boxart: string;
+    cartart: string;
+    fanart: string;
+    flyer: string;
+    marquee: string;
+    snap: string;
+    wheel: string;
+    modifiedDate: Date;
+    systemId: number;
+    system: System;
+    romFolderName: string;
+    roms: Rom[];
+    clientId: number;
+    client: Client;
+}
+

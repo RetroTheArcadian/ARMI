@@ -1,0 +1,9 @@
+﻿
+export enum ClientHostType {
+  local = 0,
+  sFtp = 1,
+  ftp = 2,
+  samba = 3,
+}
+
+

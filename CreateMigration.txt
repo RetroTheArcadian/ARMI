@@ -1,0 +1,5 @@
+cd ARMI.SqlServer
+dotnet ef migrations add Initial --startup-project ../ARMI.Web/
+cd..
+cd ARMI.SqlLiteServer
+dotnet ef migrations add Initial --startup-project ../ARMI.Web/

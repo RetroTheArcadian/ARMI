@@ -1,0 +1,16 @@
+﻿
+export class Client  {
+    clientId: number;
+    title: string;
+    clientHostType: ClientHostType;
+    host: string;
+    port: number;
+    userName: string;
+    password: string;
+    isMaster: boolean;
+    romFolder: string;
+    attractModeFolder: string;
+    emulators: Emulator[];
+    romLists: RomList[];
+}
+

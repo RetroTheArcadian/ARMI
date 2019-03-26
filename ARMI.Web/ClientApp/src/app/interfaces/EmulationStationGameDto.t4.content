@@ -1,0 +1,21 @@
+﻿
+export class EmulationStationGameDto  {
+    desc: string;
+    developer: string;
+    genre: string;
+    id: string;
+    image: string;
+    lastplayed: string;
+    marquee: string;
+    name: string;
+    path: string;
+    playcount: string;
+    players: string;
+    publisher: string;
+    rating: string;
+    releasedate: string;
+    source: string;
+    thumbnail: string;
+    video: string;
+}
+

@@ -1,0 +1,18 @@
+<#@ template debug="false" hostSpecific="true" language="C#" #>
+<#@ output extension=".ts" #>
+<#@ import namespace="System.IO" #>
+<#
+    var currentPath = Host.ResolvePath(string.Empty);
+    var directory = new DirectoryInfo(currentPath);
+    foreach (var fileInfo in directory.GetFiles("*.t4.*"))
+    {
+        using (var sr = fileInfo.OpenText())
+        {
+            var s = string.Empty;
+            while ((s = sr.ReadLine()) != null)
+            {
+                #><#=s + Environment.NewLine #> <#
+            }
+        }
+    }
+#>

@@ -1,0 +1,7 @@
+﻿
+export class TreeViewNodeDto  {
+    id: number;
+    name: string;
+    hasChildren: boolean;
+}
+

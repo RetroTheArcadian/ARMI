@@ -1,0 +1,21 @@
+﻿
+export class System  {
+    systemId: number;
+    name: string;
+    romFolder: string;
+    releaseDate: string;
+    developer: string;
+    manufacturer: string;
+    controllers: string;
+    cpu: string;
+    memory: string;
+    graphics: string;
+    sound: string;
+    display: string;
+    media: string;
+    description: string;
+    fileExtensions: string;
+    wiki: string;
+    emulators: Emulator[];
+}
+
