@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,8 +14,12 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-  direction: 'horizontal',
-  slidesPerView: 'auto'
+  direction: 'vertical',
+  observer: true,
+  threshold: 50,
+  spaceBetween: 0,
+  slidesPerView: 5,
+  centeredSlides: true
 };
 
 import { LoadingModule } from './loading/loading.module';
@@ -27,6 +32,7 @@ import { ClientsComponent } from './clients/clients.component';
 import { EmulatorsComponent } from './emulators/emulators.component';
 import { RomsComponent } from './roms/roms.component';
 import { RomListsComponent } from './romlists/romlists.component';
+import { SystemsComponent } from './systems/systems.component';
 
 /* Data service */
 import { ClientService } from './services/client.service';
@@ -36,6 +42,7 @@ import { JobHubService } from './services/jobHub.service';
 import { RomListService } from './services/romlist.service';
 import { RomsService } from './services/roms.service';
 import { JobService } from './services/job.service';
+import { SystemService } from './services/system.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +52,8 @@ import { JobService } from './services/job.service';
     ClientsComponent,
     EmulatorsComponent,
     RomsComponent,
-    RomListsComponent
+    RomListsComponent,
+    SystemsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -58,7 +66,8 @@ import { JobService } from './services/job.service';
       { path: 'clients', component: ClientsComponent },
       { path: 'emulators', component: EmulatorsComponent },
       { path: 'roms', component: RomsComponent },
-      { path: 'romlists', component: RomListsComponent }
+      { path: 'romlists', component: RomListsComponent },
+      { path: 'systems', component: SystemsComponent },
     ]),
     NgbModule,
     TreeModule.forRoot(),
@@ -76,6 +85,7 @@ import { JobService } from './services/job.service';
     ImportService,
     RomListService,
     RomsService,
+    SystemService,
     ColorScheme,
     {
       provide: SWIPER_CONFIG,

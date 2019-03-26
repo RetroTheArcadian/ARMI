@@ -1,0 +1,51 @@
+<h3 class="arcadia">
+  <label class="yellow">S</label>
+  <label class="blue">ystems</label>
+</h3>
+<div class="row" *ngIf="systems">
+  <div class="col-3 slider-container">
+    <div class="vertical-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="50%">
+      <div class="content-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="auto">
+        <div #systemSwiper="ngxSwiper" class="swiper-container" [swiper]="config" fxFlex="auto" (indexChange)="onIndexChange($event)">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let system of systems">
+              <p style="height:100%;">
+                <img src='assets/systems/logo/{{system.romFolder}}.png' srcset='assets/systems/logo/{{system.romFolder}}.svg 1x' style="height:100%;" />
+              </p>
+            </div>
+          </div>
+          <div class="swiper-scrollbar"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev">prev</div>
+          <div class="swiper-button-next">next</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-9" *ngIf="selectedSystem">
+    <div class="row">
+      <div class="col-4">
+        <h4>{{selectedSystem.name}}</h4>
+        <img src='assets/systems/{{selectedSystem.romFolder}}.png' style="height:20vh;" />
+      </div>
+      <div class="col-8">
+        <p>{{selectedSystem.description}}</p>
+      </div>
+    </div>
+
+    <p>{{selectedSystem.romFolder}}</p>
+    <p>{{selectedSystem.releaseDate}}</p>
+    <p>{{selectedSystem.developer}}</p>
+    <p>{{selectedSystem.manufacturer}}</p>
+    <p>{{selectedSystem.controllers}}</p>
+    <p>{{selectedSystem.cpu}}</p>
+    <p>{{selectedSystem.memory}}</p>
+    <p>{{selectedSystem.graphics}}</p>
+    <p>{{selectedSystem.sound}}</p>
+    <p>{{selectedSystem.display}}</p>
+    <p>{{selectedSystem.media}}</p>
+    
+    <p>{{selectedSystem.fileExtensions}}</p>
+    <a href="{{selectedSystem.wiki}}">wiki</a>
+  </div>
+</div>

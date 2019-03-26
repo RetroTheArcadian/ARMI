@@ -72,7 +72,7 @@ import { Configuration } from '../app.constants';
 import { ArrayUtilities } from '../utils/array.utils';
 // import {parseModel} from '../models/ModelHelper';
 
-$Classes(c => c.Namespace == "ARMI.Controllers")[
+$Classes(c => c.Namespace == "ARMI.Web.Controllers")[
 import { $CalculatedModelTypesImports } from '../interfaces/_Models';
 
 @Injectable()

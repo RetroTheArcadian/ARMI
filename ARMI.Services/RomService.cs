@@ -17,7 +17,5 @@ namespace ARMI.Services
         {
             return db.Roms.OrderBy(x=>x.Name).Take(100).ToList();
         }
-
-
     }
 }

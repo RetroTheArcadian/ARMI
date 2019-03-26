@@ -71,7 +71,9 @@ $font-size-sm: $font-size-base * .875 !default;
 
 $navbar-dark-active-color: $yellow;
 $navbar-dark-hover-color: rgba($blue, .75) !default;
-$navbar-padding-y: $spacer / 6 !default;
+$navbar-padding-y: $spacer / 10 !default;
+$nav-link-padding-y: .2rem !default;
+$nav-link-padding-x: .5rem !default;
 
 $list-group-bg: $dark-transparent;
 
@@ -134,14 +136,19 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  padding-top: 40px;
 }
 .container-main {
-  padding-top: 10px;
+  /*padding-top: 10px;*/
 }
 .navbar {
   min-height: 50px !important;
 }
-
+.navbar-nav {
+  .nav-link{
+    font-size:x-large;
+  }
+}
 @font-face {
   font-family: '04b';
   src: url('src/assets/fonts/04b30.woff2') format('woff2'), url('src/assets/fonts/04b30.woff') format('woff'), url('src/assets/fonts/04b30.ttf') format('truetype'), url('src/assets/fonts/04b30.svg#04b30') format('svg');
@@ -154,7 +161,7 @@ body {
   font-style: normal;
 }
 .arcadia-logo {
-  height: 60px;
+  height: 64px;
   position: absolute;
   top: 2px;
   left: 10px;
@@ -290,6 +297,7 @@ body {
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "loading.scss";
 @import "tree.scss";
+@import 'swiper.scss';
 /* Font Awsome */
 .fa, .fas{
   margin-right:4px;

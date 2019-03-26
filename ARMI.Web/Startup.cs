@@ -34,29 +34,6 @@ namespace ARMI.Web
             services.Configure<Config>(Configuration.GetSection("Config"));
             var connectionType = Configuration.GetSection("Config:ConnectionType").Value;
             services.AddDbContext<ApplicationDbContext>();
-            //switch (connectionType)
-            //{
-            //    case "Sql":
-            //        {
-            //            services.AddDbContext<ApplicationDbContext>(options =>
-            //            options.UseSqlServer(Configuration.GetConnectionString("SqlDatabase"), x =>
-            //            {
-            //                x.MigrationsAssembly("ARMI.SqlServer");
-            //            }));
-            //            break;
-            //        }
-
-            //    case "SqlLite":
-            //    default:
-            //        {
-            //            services.AddDbContext<ApplicationDbContext>(options =>
-            //            options.UseSqlite(Configuration.GetConnectionString("SqlLiteDatabase"), x =>
-            //            {
-            //                x.MigrationsAssembly("ARMI.SqlLiteServer");
-            //            }));
-            //            break;
-            //        }
-            //}
             services
                 .AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
@@ -82,6 +59,7 @@ namespace ARMI.Web
             services.AddTransient<IImportService, ImportService>();
             services.AddTransient<IRomService, RomService>();
             services.AddTransient<IRomListService, RomListService>();
+            services.AddTransient<ISystemService, SystemService>();
 
             // Add scraper services
             services.AddTransient<IArcadeDbScraperService, ArcadeDbScraperService>();

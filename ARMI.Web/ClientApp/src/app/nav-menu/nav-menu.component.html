@@ -1,5 +1,5 @@
 <header>
-  <nav class='navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark'>
+  <nav class='navbar fixed-top navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark'>
     <div class="container-fluid">
       <a class="navbar-brand" [routerLink]='["/"]'><img src='assets/logo/armi.png' srcset='assets/logo/armi.svg 1x' class="arcadia-logo" /></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation"
@@ -9,17 +9,20 @@
       <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" [ngClass]='{"show": isExpanded}'>
         <ul class="navbar-nav flex-grow">
           <li class="nav-item" [routerLinkActive]='["active"]'>
-            <a class="nav-link arcadia" [routerLink]='["/romlists"]' title="Romlists"><i class="fas fa-gamepad"></i></a>
+            <a class="nav-link" [routerLink]='["/romlists"]' title="Romlists"><i class="fas fa-gamepad"></i></a>
           </li>
           <li class="nav-item" [routerLinkActive]='["active"]'>
-            <a class="nav-link arcadia" [routerLink]='["/clients"]' title="Tasks">
+            <a class="nav-link" [routerLink]='["/systems"]' title="Systems"><i class="fas fa-laptop-code"></i></a>
+          </li>
+          <li class="nav-item" [routerLinkActive]='["active"]'>
+            <a class="nav-link" [routerLink]='["/clients"]' title="Tasks">
               <i class="fas fa-sync fa-spin" *ngIf="isJobsRunning"></i>
               <i class="fas fa-tasks" *ngIf="!isJobsRunning"></i>
             </a>
           </li>
           <li class="nav-item" [routerLinkActive]='["active"]' title="Settings">
             <div ngbDropdown class="d-inline-block" placement="bottom-right">
-              <a class="nav-link arcadia" id="dropdownBasic1" ngbDropdownToggle><i class="fas fa-cogs"></i></a>
+              <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle><i class="fas fa-cogs"></i></a>
               <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                 <button ngbDropdownItem [routerLink]='["/clients"]' [routerLinkActive]='["active"]'><i class="fas fa-network-wired"></i>Clients</button>
                 <button ngbDropdownItem [routerLink]='["/emulators"]' [routerLinkActive]='["active"]'><i class="fas fa-laptop-code"></i>Emulators</button>

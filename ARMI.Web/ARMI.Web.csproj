@@ -28,17 +28,99 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\dist\**" />
     <Compile Remove="wwwroot\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\dist\**" />
     <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="ClientApp\dist\**" />
     <EmbeddedResource Remove="wwwroot\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\dist\**" />
     <None Remove="wwwroot\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="ARMI.db" />
+    <None Remove="ClientApp\dist\04b30.581f6ae77c766c59214e.woff" />
+    <None Remove="ClientApp\dist\04b30.6096c38a9112a6e5330a.woff2" />
+    <None Remove="ClientApp\dist\04b30.aa64ac78169477aa8464.ttf" />
+    <None Remove="ClientApp\dist\04b30.e1f5ce88287f917ad723.svg" />
+    <None Remove="ClientApp\dist\3rdpartylicenses.txt" />
+    <None Remove="ClientApp\dist\arcade.22639527d6348e555b7d.jpg" />
+    <None Remove="ClientApp\dist\assets\backgrounds\arcade.jpg" />
+    <None Remove="ClientApp\dist\assets\favicon\apple-touch-icon-114x114.png" />
+    <None Remove="ClientApp\dist\assets\favicon\apple-touch-icon-120x120.png" />
+    <None Remove="ClientApp\dist\assets\favicon\apple-touch-icon-144x144.png" />
+    <None Remove="ClientApp\dist\assets\favicon\apple-touch-icon-152x152.png" />
+    <None Remove="ClientApp\dist\assets\favicon\apple-touch-icon-57x57.png" />
+    <None Remove="ClientApp\dist\assets\favicon\apple-touch-icon-60x60.png" />
+    <None Remove="ClientApp\dist\assets\favicon\apple-touch-icon-72x72.png" />
+    <None Remove="ClientApp\dist\assets\favicon\apple-touch-icon-76x76.png" />
+    <None Remove="ClientApp\dist\assets\favicon\code.txt" />
+    <None Remove="ClientApp\dist\assets\favicon\favicon-128.png" />
+    <None Remove="ClientApp\dist\assets\favicon\favicon-16x16.png" />
+    <None Remove="ClientApp\dist\assets\favicon\favicon-196x196.png" />
+    <None Remove="ClientApp\dist\assets\favicon\favicon-32x32.png" />
+    <None Remove="ClientApp\dist\assets\favicon\favicon-96x96.png" />
+    <None Remove="ClientApp\dist\assets\favicon\favicon.ico" />
+    <None Remove="ClientApp\dist\assets\favicon\icon.png" />
+    <None Remove="ClientApp\dist\assets\favicon\mstile-144x144.png" />
+    <None Remove="ClientApp\dist\assets\favicon\mstile-150x150.png" />
+    <None Remove="ClientApp\dist\assets\favicon\mstile-310x150.png" />
+    <None Remove="ClientApp\dist\assets\favicon\mstile-310x310.png" />
+    <None Remove="ClientApp\dist\assets\favicon\mstile-70x70.png" />
+    <None Remove="ClientApp\dist\assets\fonts\04b30.svg" />
+    <None Remove="ClientApp\dist\assets\fonts\04b30.ttf" />
+    <None Remove="ClientApp\dist\assets\fonts\04b30.woff" />
+    <None Remove="ClientApp\dist\assets\fonts\04b30.woff2" />
+    <None Remove="ClientApp\dist\assets\logo\armi.png" />
+    <None Remove="ClientApp\dist\assets\logo\armi.svg" />
+    <None Remove="ClientApp\dist\assets\systems\3do.png" />
+    <None Remove="ClientApp\dist\assets\systems\amiga.png" />
+    <None Remove="ClientApp\dist\assets\systems\amstradcpc.png" />
+    <None Remove="ClientApp\dist\assets\systems\apple2.png" />
+    <None Remove="ClientApp\dist\assets\systems\arcade.png" />
+    <None Remove="ClientApp\dist\assets\systems\atari2600.png" />
+    <None Remove="ClientApp\dist\assets\systems\atari5200.png" />
+    <None Remove="ClientApp\dist\assets\systems\atari7800.png" />
+    <None Remove="ClientApp\dist\assets\systems\atarijaguar.png" />
+    <None Remove="ClientApp\dist\assets\systems\atarilynx.png" />
+    <None Remove="ClientApp\dist\assets\systems\atarist.png" />
+    <None Remove="ClientApp\dist\assets\systems\c64.png" />
+    <None Remove="ClientApp\dist\assets\systems\coco.png" />
+    <None Remove="ClientApp\dist\assets\systems\coleco.png" />
+    <None Remove="ClientApp\dist\assets\systems\daphne.png" />
+    <None Remove="ClientApp\dist\assets\systems\fds.png" />
+    <None Remove="ClientApp\dist\assets\systems\gameandwatch.png" />
+    <None Remove="ClientApp\dist\assets\systems\gba.png" />
+    <None Remove="ClientApp\dist\assets\systems\gbc.png" />
+    <None Remove="ClientApp\dist\assets\systems\gc.png" />
+    <None Remove="ClientApp\dist\assets\systems\intellivision.png" />
+    <None Remove="ClientApp\dist\assets\systems\macintosh.png" />
+    <None Remove="ClientApp\dist\assets\systems\mame.png" />
+    <None Remove="ClientApp\dist\assets\systems\mastersystem.png" />
+    <None Remove="ClientApp\dist\fa-brands-400.175ef492f87a05e2ce45.woff" />
+    <None Remove="ClientApp\dist\fa-brands-400.24a77b8baa5b34fb5081.woff2" />
+    <None Remove="ClientApp\dist\fa-brands-400.28c2e91df5676f8a615b.eot" />
+    <None Remove="ClientApp\dist\fa-brands-400.85dcebc2b9d56a2b94f7.svg" />
+    <None Remove="ClientApp\dist\fa-brands-400.8742c0293a67556fbb57.ttf" />
+    <None Remove="ClientApp\dist\fa-regular-400.34e0db45ef15f5a05814.woff2" />
+    <None Remove="ClientApp\dist\fa-regular-400.47758afd15884569fa98.svg" />
+    <None Remove="ClientApp\dist\fa-regular-400.73e57f339e3e8574d0d4.eot" />
+    <None Remove="ClientApp\dist\fa-regular-400.7599ecd0c99d05133229.ttf" />
+    <None Remove="ClientApp\dist\fa-regular-400.c6e6643b688fe307651a.woff" />
+    <None Remove="ClientApp\dist\fa-solid-900.26fdf2ddc0e845cc454b.ttf" />
+    <None Remove="ClientApp\dist\fa-solid-900.cb45ce038f8d6ccf24a4.eot" />
+    <None Remove="ClientApp\dist\fa-solid-900.e474ff3afacf902ab8f4.svg" />
+    <None Remove="ClientApp\dist\fa-solid-900.ecafd67cb64dc8f4d064.woff" />
+    <None Remove="ClientApp\dist\fa-solid-900.fb4ea3247aace8c1c8bc.woff2" />
+    <None Remove="ClientApp\dist\index.html" />
+    <None Remove="ClientApp\dist\main.328a096a941981062d2a.js" />
+    <None Remove="ClientApp\dist\polyfills.a589302521a5c65c4704.js" />
+    <None Remove="ClientApp\dist\runtime.26209474bfa8dc87a77c.js" />
+    <None Remove="ClientApp\dist\styles.6fffc1b2aaa19dd17cfa.css" />
     <None Remove="ClientApp\src\app\interfaces\models.tst" />
     <None Remove="ClientApp\src\app\loading\loading.component.ts" />
     <None Remove="ClientApp\src\app\loading\loading.interface.ts" />
@@ -54,7 +136,7 @@
     <Folder Include="ClientApp\src\app\links\" />
     <Folder Include="ClientApp\src\app\footer\" />
     <Folder Include="ClientApp\src\app\themes\" />
-    <Folder Include="ClientApp\src\app\systems\" />
+    <Folder Include="ClientApp\src\assets\systems\logo\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -145,6 +227,9 @@
     </None>
     <None Update="ClientApp\src\app\services\scraper.service.ts">
       <CustomToolNamespace>Controllers\ScraperController.cs</CustomToolNamespace>
+    </None>
+    <None Update="ClientApp\src\app\services\system.service.ts">
+      <CustomToolNamespace>Controllers\SystemController.cs</CustomToolNamespace>
     </None>
     <None Update="src\app\interfaces\models.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

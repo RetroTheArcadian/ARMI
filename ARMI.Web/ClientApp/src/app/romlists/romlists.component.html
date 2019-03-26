@@ -1,3 +1,4 @@
+<button class="btn btn-primary float-right" (click)="importGameLists()"><i class="fas fa-download"></i>Import</button>
 <div class="row">
   <div class="col-3">
     <div ngbDropdown>
@@ -36,10 +37,7 @@
             <option [ngValue]="500">500</option>
             <option [ngValue]="1000">1000</option>
           </select>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <button class="btn btn-primary" (click)="importGameLists()"><i class="fas fa-download"></i>Import</button>
-            </div>
+          <div class="input-group mb-2">
             <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon-search">
             <div class="input-group-append">
               <button class="btn btn-outline-secondary" type="button" id="button-addon-search">Search</button>
