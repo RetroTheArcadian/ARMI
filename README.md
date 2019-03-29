@@ -65,7 +65,7 @@ Finally build the solution in Visual Studio or other IDE which supports .NET Cor
 
 | <a href="http://github.com/RetroTheArcadian" target="_blank">**RetroTheArcadian**</a> | <a href="http://github.com/RetroTheArcadian" target="_blank">**Your name**</a>
 | :---: |:---:|
-| [![RetroTheArcadian](https://avatars3.githubusercontent.com/u/48915559?s=200&u=07838c4a25bca80869539a9c7668ae8a48fee741&v=4)](http://github.com/RetroTheArcadian)    | [![RetroTheArcadian](https://avatars3.githubusercontent.com/u/48915559?s=200&u=07838c4a25bca80869539a9c7668ae8a48fee741&v=4)](http://github.com/RetroTheArcadian) 
+| <img src="https://raw.githubusercontent.com/RetroTheArcadian/ARMI/master/ARMI.Web/ClientApp/src/assets/users/viking.png" width="200"> | <img src="https://raw.githubusercontent.com/RetroTheArcadian/ARMI/master/ARMI.Web/ClientApp/src/assets/users/anon.png" width="200">
 | <a href="http://github.com/RetroTheArcadian" target="_blank">`github`</a> | <a href="http://github.com/RetroTheArcadian" target="_blank">`github`</a>|
 
 ---
