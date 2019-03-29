@@ -1,34 +1,26 @@
-<h3 class="arcadia">
-  <label class="yellow">S</label>
-  <label class="blue">ystems</label>
-</h3>
-<div class="row" *ngIf="systems">
-  <div class="col-3 slider-container">
-    <div class="vertical-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="50%">
-      <div class="content-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="auto">
-        <div #systemSwiper="ngxSwiper" class="swiper-container" [swiper]="config" fxFlex="auto" (indexChange)="onIndexChange($event)">
+<div class="row h-100" *ngIf="systems">
+  <div class="col-3 h-100">
+    <!--<div class="vertical-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="50%">-->
+      <!--<div class="content-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="auto">-->
+        <div #systemSwiper="ngxSwiper" class="swiper-container" [swiper]="config" (indexChange)="onIndexChange($event)">
           <div class="swiper-wrapper">
             <div class="swiper-slide" *ngFor="let system of systems">
-              <p style="height:100%;">
-                <img src='assets/systems/logo/{{system.romFolder}}.png' srcset='assets/systems/logo/{{system.romFolder}}.svg 1x' style="height:100%;" />
+              <p>
+                <img src='assets/systems/logo/{{system.romFolder}}.png' srcset='assets/systems/logo/{{system.romFolder}}.svg 1x' style="width:100%;" />
               </p>
             </div>
           </div>
-          <div class="swiper-scrollbar"></div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev">prev</div>
-          <div class="swiper-button-next">next</div>
         </div>
-      </div>
-    </div>
+      <!--</div>-->
+    <!--</div>-->
   </div>
-  <div class="col-9" *ngIf="selectedSystem">
-    <div class="row">
-      <div class="col-4">
+  <div class="col-9 h-100" *ngIf="selectedSystem" [style]="selectedSystemImage">
+    <div class="row h-100">
+      <div class="col-4 h-100">
         <h4>{{selectedSystem.name}}</h4>
-        <img src='assets/systems/{{selectedSystem.romFolder}}.png' style="height:20vh;" />
+        <!--<img src='assets/systems/{{selectedSystem.romFolder}}.png' class="h-20" />-->
       </div>
-      <div class="col-8">
+      <div class="col-8 h-100">
         <p>{{selectedSystem.description}}</p>
       </div>
     </div>
