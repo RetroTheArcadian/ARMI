@@ -10,17 +10,6 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TreeModule } from 'angular-tree-component';
 import { ContextMenuModule } from 'ngx-contextmenu';
-import { SwiperModule } from 'ngx-swiper-wrapper';
-import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
-import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
-const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-  direction: 'vertical',
-  observer: true,
-  threshold: 50,
-  spaceBetween: 0,
-  slidesPerView: 5,
-  centeredSlides: true
-};
 
 import { LoadingModule } from './loading/loading.module';
 import { ColorScheme } from './app.constants';
@@ -74,8 +63,7 @@ import { SystemService } from './services/system.service';
     LoadingModule.forRoot(),
     ContextMenuModule.forRoot({
       useBootstrap4: true
-    }),
-    SwiperModule
+    })
   ],
   providers: [
     ClientService,
@@ -86,11 +74,7 @@ import { SystemService } from './services/system.service';
     RomListService,
     RomsService,
     SystemService,
-    ColorScheme,
-    {
-      provide: SWIPER_CONFIG,
-      useValue: DEFAULT_SWIPER_CONFIG
-    }
+    ColorScheme
   ],
   bootstrap: [AppComponent]
 })

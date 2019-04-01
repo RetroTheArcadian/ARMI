@@ -128,6 +128,9 @@ $input-disabled-bg: $gray-900 !default;
 $input-color: $white !default;
 $input-border-color: $gray-700 !default;
 
+//Card
+$card-bg: rgba($gray-900, .8) !default;
+
 body {
   background-color: #323232;
   color: #ebebeb;
@@ -296,6 +299,17 @@ body {
   font-weight:700;
   text-align: center;
   background-color: transparent;
+}
+
+.scrollSidebar {
+  height: 90vh;
+  overflow-y: scroll;
+  img {
+    cursor:pointer;
+  }
+}
+.scrollSidebar::-webkit-scrollbar {
+  display: none;
 }
 
 //Imports

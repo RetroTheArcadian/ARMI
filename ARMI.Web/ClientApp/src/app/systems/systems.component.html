@@ -1,18 +1,10 @@
 <div class="row h-100" *ngIf="systems">
   <div class="col-3 h-100">
-    <!--<div class="vertical-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="50%">-->
-      <!--<div class="content-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="auto">-->
-        <div #systemSwiper="ngxSwiper" class="swiper-container" [swiper]="config" (indexChange)="onIndexChange($event)">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" *ngFor="let system of systems">
-              <p>
-                <img src='assets/systems/logo/{{system.romFolder}}.png' srcset='assets/systems/logo/{{system.romFolder}}.svg 1x' style="width:100%;" />
-              </p>
-            </div>
-          </div>
-        </div>
-      <!--</div>-->
-    <!--</div>-->
+    <div class="scrollSidebar">
+      <p *ngFor="let system of systems; let i = index;">
+        <img (click)="onIndexChange(i)" src='assets/systems/logo/{{system.romFolder}}.png' srcset='assets/systems/logo/{{system.romFolder}}.svg 1x' style="width:100%;" />
+      </p>
+    </div>
   </div>
   <div class="col-9" *ngIf="selectedSystem">
     <div class="row">
@@ -43,14 +35,20 @@
         <p>{{selectedSystem.romFolder}}</p>
       </div>
       <div class="col-4">
-        <p style="font-weight:700;background-color:rgba(62, 62, 62, 0.90);padding:2px;margin-bottom:1px;" class="text-center">Technical</p>
-        <p>Controllers: {{selectedSystem.controllers}}</p>
-        <p>{{selectedSystem.cpu}}</p>
-        <p>{{selectedSystem.memory}}</p>
-        <p>{{selectedSystem.graphics}}</p>
-        <p>Sound: {{selectedSystem.sound}}</p>
-        <p>{{selectedSystem.display}}</p>
-        <p>{{selectedSystem.media}}</p>
+        <div class="card">
+          <div class="card-header">
+            Technical
+          </div>
+          <div class="card-body">
+            <p>Controllers: {{selectedSystem.controllers}}</p>
+            <p>{{selectedSystem.cpu}}</p>
+            <p>{{selectedSystem.memory}}</p>
+            <p>{{selectedSystem.graphics}}</p>
+            <p>Sound: {{selectedSystem.sound}}</p>
+            <p>{{selectedSystem.display}}</p>
+            <p>{{selectedSystem.media}}</p>
+          </div>
+        </div>
       </div>
     </div>
     <a class="btn btn-secondary float-right" href="{{selectedSystem.wiki}}">wiki</a>

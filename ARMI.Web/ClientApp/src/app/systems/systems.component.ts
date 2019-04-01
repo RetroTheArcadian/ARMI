@@ -1,12 +1,8 @@
-import { Component, OnInit, HostBinding, ViewChild } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { System } from '../interfaces/_Models';
 import { slideInDownAnimation } from '../utils/animation.utils';
 import { SystemService } from '../services/system.service';
-import {
-  SwiperDirective, SwiperConfigInterface,
-  SwiperScrollbarInterface, SwiperPaginationInterface
-} from 'ngx-swiper-wrapper';
-import { transcode } from 'buffer';
+import { concat } from 'rxjs/operators';
 
 
 @Component({
@@ -17,43 +13,11 @@ import { transcode } from 'buffer';
 export class SystemsComponent implements OnInit {
   @HostBinding('@routeAnimation') routeAnimation = true;
   @HostBinding('style.display') display = 'block';
-  @ViewChild('systemSwiper') directiveRef?: SwiperDirective;
+
   constructor(public systemService: SystemService)
   {
 
   }
-  config: SwiperConfigInterface = {
-    //a11y: true,
-    //effect: 'coverflow',
-    //centeredSlides: true,
-    //coverflowEffect: {
-    //  rotate: 50,
-    //  stretch: 0,
-    //  depth: 100,
-    //  modifier: 1,
-    //  slideShadows: true,
-    //},
-    //pagination: {
-    //  el: '.swiper-pagination',
-    //},
-    //direction: 'vertical',
-    //slidesPerView: 'auto',
-    keyboard: true,
-    mousewheel: true,
-    scrollbar: true,
-    //navigation: false,
-    //grabCursor: true,
-    //spaceBetween: 4,
-    freeMode: true,
-    freeModeSticky: true,
-    direction: 'vertical',
-    slidesPerView: 5,
-    spaceBetween: 3,
-  };
- 
-
-  modelViewMode = "wheel";
-  indexWheel: 1;
   systems: System[];
   selectedSystem: System;
   ngOnInit(): void {
@@ -61,10 +25,10 @@ export class SystemsComponent implements OnInit {
       this.systems = systems;
       this.selectedSystem = this.systems[0];
     });
-  }
-  
+  }  
 
   onIndexChange(index: number): void {
+    console.log("onIndexChange", index)
     this.selectedSystem = this.systems[index];
   }
 }
