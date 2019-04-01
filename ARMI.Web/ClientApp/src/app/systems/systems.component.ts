@@ -1,5 +1,4 @@
 import { Component, OnInit, HostBinding, ViewChild } from '@angular/core';
-import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 import { System } from '../interfaces/_Models';
 import { slideInDownAnimation } from '../utils/animation.utils';
 import { SystemService } from '../services/system.service';
@@ -19,7 +18,7 @@ export class SystemsComponent implements OnInit {
   @HostBinding('@routeAnimation') routeAnimation = true;
   @HostBinding('style.display') display = 'block';
   @ViewChild('systemSwiper') directiveRef?: SwiperDirective;
-  constructor(public systemService: SystemService, private sanitizer: DomSanitizer)
+  constructor(public systemService: SystemService)
   {
 
   }
@@ -63,14 +62,9 @@ export class SystemsComponent implements OnInit {
       this.selectedSystem = this.systems[0];
     });
   }
-  selectedSystemImage: SafeStyle;
   
 
   onIndexChange(index: number): void {
     this.selectedSystem = this.systems[index];
-    this.selectedSystemImage = this.sanitizer.bypassSecurityTrustStyle("background: url('assets/systems/" + this.selectedSystem.romFolder + ".png') no-repeat right bottom fixed");
-    console.log(this.selectedSystemImage);
-    //console.log('Swiper index: ', index, this.systems[index]);
-    //console.log(this.directiveRef);
   }
 }

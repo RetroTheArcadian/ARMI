@@ -14,30 +14,45 @@
       <!--</div>-->
     <!--</div>-->
   </div>
-  <div class="col-9 h-100" *ngIf="selectedSystem" [style]="selectedSystemImage">
-    <div class="row h-100">
-      <div class="col-4 h-100">
-        <h4>{{selectedSystem.name}}</h4>
-        <!--<img src='assets/systems/{{selectedSystem.romFolder}}.png' class="h-20" />-->
-      </div>
-      <div class="col-8 h-100">
+  <div class="col-9" *ngIf="selectedSystem">
+    <div class="row">
+      <div class="col-5">
+        <h4 class="text-center arcadia">{{selectedSystem.name}}</h4>
+        <img src='assets/systems/{{selectedSystem.romFolder}}.png' style="max-width:300px; max-height:200px;" />
         <p>{{selectedSystem.description}}</p>
       </div>
+      <div class="col-3">
+        <div class="card margin-bottom-sm">
+          <div class="card-header">
+            Info
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{selectedSystem.releaseDate}}</p>
+            <p class="card-text">{{selectedSystem.developer}}</p>
+            <p class="card-text">{{selectedSystem.manufacturer}}</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            Extensions
+          </div>
+          <div class="card-body">
+            <span class="badge badge-secondary" *ngFor="let ext of selectedSystem.fileExtensions.split(' ')">{{ext}}</span>
+          </div>
+        </div>
+        <p>{{selectedSystem.romFolder}}</p>
+      </div>
+      <div class="col-4">
+        <p style="font-weight:700;background-color:rgba(62, 62, 62, 0.90);padding:2px;margin-bottom:1px;" class="text-center">Technical</p>
+        <p>Controllers: {{selectedSystem.controllers}}</p>
+        <p>{{selectedSystem.cpu}}</p>
+        <p>{{selectedSystem.memory}}</p>
+        <p>{{selectedSystem.graphics}}</p>
+        <p>Sound: {{selectedSystem.sound}}</p>
+        <p>{{selectedSystem.display}}</p>
+        <p>{{selectedSystem.media}}</p>
+      </div>
     </div>
-
-    <p>{{selectedSystem.romFolder}}</p>
-    <p>{{selectedSystem.releaseDate}}</p>
-    <p>{{selectedSystem.developer}}</p>
-    <p>{{selectedSystem.manufacturer}}</p>
-    <p>{{selectedSystem.controllers}}</p>
-    <p>{{selectedSystem.cpu}}</p>
-    <p>{{selectedSystem.memory}}</p>
-    <p>{{selectedSystem.graphics}}</p>
-    <p>{{selectedSystem.sound}}</p>
-    <p>{{selectedSystem.display}}</p>
-    <p>{{selectedSystem.media}}</p>
-    
-    <p>{{selectedSystem.fileExtensions}}</p>
-    <a href="{{selectedSystem.wiki}}">wiki</a>
+    <a class="btn btn-secondary float-right" href="{{selectedSystem.wiki}}">wiki</a>
   </div>
 </div>
