@@ -1,4 +1,7 @@
-﻿namespace ARMI;
+﻿using ARMI.Helpers;
+using ARMI.Data;
+
+namespace ARMI;
 
 public static class MauiProgram
 {
@@ -12,6 +15,9 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
+
+		string dbPath = FileAccessHelper.GetLocalFilePath("armi.db3");
+    	builder.Services.AddSingleton<DataRepository>(s => ActivatorUtilities.CreateInstance<DataRepository>(s, dbPath));
 
 		return builder.Build();
 	}

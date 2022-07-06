@@ -331,3 +331,4 @@ ASALocalRun/
 
 # Include release zip files
 !/Releases/*.zip
+.DS_Store
