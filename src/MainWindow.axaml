@@ -6,10 +6,10 @@
         x:Class="ARMI.MainWindow"
         Title="A.R.M.I - Arcade Rom Manament Interface"
         TransparencyLevelHint="AcrylicBlur"
-        Background="Transparent"
+        Background="Black"
         ExtendClientAreaToDecorationsHint="True">
     <DockPanel>
-        <Menu DockPanel.Dock="Top">
+        <Menu DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalAlignment="Center">
             <MenuItem Header="_File">
                 <MenuItem Header="_Open..."/>
                 <Separator/>
