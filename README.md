@@ -6,7 +6,6 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ![GitHub last commit](https://img.shields.io/github/last-commit/RetroTheArcadian/ARMI.svg)
 ![GitHub repo size](https://img.shields.io/github/repo-size/RetroTheArcadian/ARMI.svg)
-[![Beerpay](https://beerpay.io/RetroTheArcadian/ARMI/badge.svg?style=flat)](https://beerpay.io/RetroTheArcadian/ARMI)
 
 - Store your complete collection one place and deploy only what you play on the different devices
 - Easy management of your collection
@@ -87,7 +86,6 @@ Create an issue here on github
 No donations required. 
 This is project a hobby project free for all.
 
-If you love **ARMI** you can buy me a [🍺](https://beerpay.io/RetroTheArcadian/ARMI)
 ## License
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
