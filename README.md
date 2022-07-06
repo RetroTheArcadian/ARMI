@@ -20,28 +20,14 @@
 ## Installation
 
 > Dowload a build below or clone this repository and build the solution yourself.
-- Windows x64
-- Windows x86
-- Linux x64
-- macOS x64
-
-> You can use SQLite or Microsoft SQL Server for ARMI.
-
-Edit **"appsettings.json"**
-SqlLite
-```json
-"ConnectionType": "SqlLite"
-```
-Microsoft SQL Server
-```json
-"ConnectionType": "Sql"
-```
+- Windows 10 and 11
+- Linux all distros which support installing .NET core 6x
+- macOS
 
 
-### Setup
+### Development
 - Clone this repo to your local machine using `https://github.com/RetroTheArcadian/ARMI.git`
-
-> now install npm packages
+- Make sure you can create and build a basic .NET MAUI app by following <a href="https://docs.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-ios">these instructions</a>
 
 ```shell
 $ npm install
@@ -86,8 +72,10 @@ Create an issue here on github
 ---
 
 ## Donations (Optional)
+
 No donations required. 
 This is project a hobby project free for all.
+If anyone wants to donate we might open up for it at a later point in time.
 
 ## License
 
