@@ -1,5 +1,5 @@
 
-<img src='ARMI.Web/ClientApp/src/assets/logo/armi.png' srcset='assets/logo/armi.svg 1x' height=200 />
+<img src='docs/assets/img/logo/armi.png' srcset='docs/assets/img/logo/armi.svg 1x' height=200 />
 
 # Arcade Rom Management Interface
 
@@ -64,7 +64,7 @@ Finally build the solution in Visual Studio or other IDE which supports .NET Cor
 
 | <a href="http://github.com/RetroTheArcadian" target="_blank">**RetroTheArcadian**</a> | <a href="http://github.com/RetroTheArcadian" target="_blank">**Your name**</a>
 | :---: |:---:|
-| <img src="https://raw.githubusercontent.com/RetroTheArcadian/ARMI/master/ARMI.Web/ClientApp/src/assets/users/viking.png" width="200"> | <img src="https://raw.githubusercontent.com/RetroTheArcadian/ARMI/master/ARMI.Web/ClientApp/src/assets/users/anon.png" width="200">
+| <img src="https://raw.githubusercontent.com/RetroTheArcadian/ARMI/master/docs/assets/img/contributors/retrothearcadian.png" width="200"> | <img src="https://raw.githubusercontent.com/RetroTheArcadian/ARMI/master/docs/assets/img/contributors/anon.png" width="200">
 | <a href="http://github.com/RetroTheArcadian" target="_blank">`github`</a> | <a href="http://github.com/RetroTheArcadian" target="_blank">`github`</a>|
 
 ---
