@@ -1,37 +1,44 @@
-## Welcome to GitHub Pages
+---
+layout: default
+---
+# {{site.title}}
+{{site.description}}
 
-You can use the [editor on GitHub](https://github.com/RetroTheArcadian/ARMI/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+### Goals
+The main goal for this project is to make the following easy for Steam Deck owners running Windows:
+- Install official drivers from [Valve](https://steamdeck-packages.steamos.cloud/misc/windows/drivers/)
+- Install and setup [GlosSI](https://github.com/Alia5/GlosSI) (Rebind Steam Controls)
+- Install and configure [Emulation Station DE](https://gitlab.com/es-de/emulationstation-de)
+- Install and configure various emulators and tools
+- Install and configure [Steam Rom Manager](https://steamgriddb.github.io/steam-rom-manager/)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Prerequisites
+You should have Windows 11 up and running [please read this guide if you need help with installing](/Steam-Deck-Windows/install-windows-11).
 
-### Markdown
+## Installing the tool
+- [Download Installer](https://steamdeckwindows.github.io/Steam-Deck-Windows/assets/install/SteamDeckWindowsSetup.zip).
+- Install **Steam Deck Windows** tool using "SteamDeckWindowsSetup.exe"
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Note: It will currently display some warnings about not beeing signed. We will get to that later but for now our focus is getting app to do stuff for us.
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+## Updating
+- Open the Steam Deck Window Tool it will automatically update.
+- All installed app and configurations which have updates will be displayed.
+- Remove checkmarks if there is something you do NOT wish to update
+- Run Update
+- DONE!
 
-- Bulleted
-- List
+## Projects and Inspiration
+Some projects have served as inspiration for us.
+- [EmuDeck](https://github.com/dragoonDorise/EmuDeck)
 
-1. Numbered
-2. List
+## Developers, developers, developers
+We are grateful for any help we can get with improving the code.
+Always open to accept your PR!
 
-**Bold** and _Italic_ and `Code` text
+In order to keep the project uniform please follow our guidelines as stated in the [developer guide](/Steam-Deck-Windows/developer-guide).
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/RetroTheArcadian/ARMI/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### And remember...
+*“Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.”*
+**Martin Golding**
