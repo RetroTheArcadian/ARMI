@@ -1,7 +1,10 @@
 
+<a href="https://retrothearcadian.github.io/ARMI/" target="_blank">
 <img src='docs/assets/img/logo/armi.png' srcset='docs/assets/img/logo/armi.svg 1x' height=200 />
+</a>
 
 # Arcade Rom Management Interface
+<a href="https://retrothearcadian.github.io/ARMI/" target="_blank">Website</a>
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ![GitHub last commit](https://img.shields.io/github/last-commit/RetroTheArcadian/ARMI.svg)
