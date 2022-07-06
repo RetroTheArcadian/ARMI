@@ -1,4 +1,4 @@
-theme: jekyll-theme-minimal-steam-deck-windows
+theme: jekyll-theme-minimal-armi
 title: Arcade Rom Management Interface
 description: This tool will help you setup and manage your retro gaming roms, emulators, frontends etc.
 show_downloads: True
