@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="980" d:DesignHeight="650"
-             x:Class="ARMI.Pages.OverViewPage">
+             x:Class="ARMI.Pages.SettingsPage">
 
 	<Panel Height="650" Width="980" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="Transparent" >
 		<TextBlock Text="Some text" Margin="10 10 0 0" />

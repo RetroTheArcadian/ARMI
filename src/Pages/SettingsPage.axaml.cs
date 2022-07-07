@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace ARMI.Pages
 {
-    public partial class OverViewPage : UserControl
+    public partial class SettingsPage : UserControl
     {
-        public OverViewPage()
+        public SettingsPage()
         {
             InitializeComponent();
         }

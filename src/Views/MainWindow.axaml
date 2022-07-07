@@ -3,11 +3,15 @@
         xmlns:vm="using:ARMI.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="800" WindowStartupLocation="CenterScreen" WindowState="Normal" TransparencyLevelHint="AcrylicBlur"
+        mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="800"
+		WindowStartupLocation="CenterScreen" 
+		WindowState="Normal" 
+		TransparencyLevelHint="AcrylicBlur"
         xmlns:pages="clr-namespace:ARMI.Pages;assembly=ARMI"
 		x:Class="ARMI.Views.MainWindow"
         Icon="/Assets/logo.ico"
-        Title="ARMI">
+        Title="ARMI"
+        Background="Transparent">
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>
@@ -21,26 +25,28 @@
 			</ExperimentalAcrylicBorder>
 			<ExperimentalAcrylicBorder IsHitTestVisible="False">
 				<ExperimentalAcrylicBorder.Material>
-					<ExperimentalAcrylicMaterial TintColor="#222222" MaterialOpacity="0.85" TintOpacity="1" />
+					<ExperimentalAcrylicMaterial TintColor="#0d0d0d" MaterialOpacity="0.85" TintOpacity="1" />
 				</ExperimentalAcrylicBorder.Material>
 				<TextBlock Text="{Binding #TabControl.SelectedItem.Header}" Margin="40 20" FontSize="32" FontWeight="Light" />
 			</ExperimentalAcrylicBorder>
 		</DockPanel>
 
 		<TabControl x:Name="TabControl" Classes="sidebar" Margin="0 40 0 0" TabStripPlacement="Left">
-			<TabItem Header="Overview">
-				<pages:OverViewPage />
-			</TabItem>
-			<TabItem Header="Devices">
-
+			<TabItem Header="Settings">
+				<pages:SettingsPage />
 			</TabItem>
 			<TabItem Header="Roms">
 
 			</TabItem>
 			<TabItem Header="Emulators">
+				<pages:EmulatorsPage />
+			</TabItem>
+			<TabItem Header="FrontEnds">
 
 			</TabItem>
+			<TabItem Header="Tools">
 
+			</TabItem>
 		</TabControl>
 	</Panel>
 </Window>

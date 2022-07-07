@@ -10,12 +10,14 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <AvaloniaResource Include="Assets\**" />
-    <AvaloniaXaml Remove="Pages\OverViewPage.axaml" />
+    <AvaloniaXaml Remove="Pages\EmulatorsPage.axaml" />
+    <AvaloniaXaml Remove="Pages\SettingsPage.axaml" />
     <None Remove=".gitignore" />
     <None Remove="Assets\logo.ico" />
   </ItemGroup>
   <ItemGroup>
-    <AvaloniaResource Include="Pages\OverViewPage.axaml" />
+    <AvaloniaResource Include="Pages\EmulatorsPage.axaml" />
+    <AvaloniaResource Include="Pages\SettingsPage.axaml" />
   </ItemGroup>
   <ItemGroup>
     <!--This helps with theme dll-s trimming.
@@ -30,6 +32,10 @@
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.14" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.14" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
     <PackageReference Include="XamlNameReferenceGenerator" Version="1.3.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\SettingsPage.axaml" />
   </ItemGroup>
 </Project>
