@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1703.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARMI", "ARMI.csproj", "{74EA1344-22C9-420B-926A-0D8AD13B0458}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARMI", "ARMI.csproj", "{66D87D69-05D2-4DF7-A8B1-4299A2B75782}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{74EA1344-22C9-420B-926A-0D8AD13B0458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{74EA1344-22C9-420B-926A-0D8AD13B0458}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{74EA1344-22C9-420B-926A-0D8AD13B0458}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{74EA1344-22C9-420B-926A-0D8AD13B0458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66D87D69-05D2-4DF7-A8B1-4299A2B75782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66D87D69-05D2-4DF7-A8B1-4299A2B75782}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66D87D69-05D2-4DF7-A8B1-4299A2B75782}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66D87D69-05D2-4DF7-A8B1-4299A2B75782}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8EEA3341-A412-4F11-9CCA-44ED8BCE9C1C}
+		SolutionGuid = {AA309D28-A691-42C3-A4EA-55B86D4E7B02}
 	EndGlobalSection
 EndGlobal

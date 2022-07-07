@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace ARMI
+namespace ARMI.Views
 {
     public partial class MainWindow : Window
     {
