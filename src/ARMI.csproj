@@ -10,8 +10,12 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <AvaloniaResource Include="Assets\**" />
+    <AvaloniaXaml Remove="Pages\OverViewPage.axaml" />
     <None Remove=".gitignore" />
     <None Remove="Assets\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Pages\OverViewPage.axaml" />
   </ItemGroup>
   <ItemGroup>
     <!--This helps with theme dll-s trimming.

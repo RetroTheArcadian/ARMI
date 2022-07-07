@@ -2,15 +2,15 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-
-namespace ARMI.Views
+namespace ARMI.Pages
 {
-    public partial class MainWindow : Window
+    public partial class OverViewPage : UserControl
     {
-        public MainWindow()
+        public OverViewPage()
         {
             InitializeComponent();
         }
+
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
